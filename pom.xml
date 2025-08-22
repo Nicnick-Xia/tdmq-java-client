@@ -55,6 +55,11 @@
 			<artifactId>pulsar-client</artifactId>
 			<version>${pulsar.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.13</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>

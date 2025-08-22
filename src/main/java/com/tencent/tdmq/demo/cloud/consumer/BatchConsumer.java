@@ -42,9 +42,8 @@ public class BatchConsumer {
                 .subscribe();
         logger.info("{}", ">> pulsar consumer created.");
 
-        Messages messages = consumer.batchReceive();
-        for (Object messsage : messages) {
-            Message<byte[]> msg = (Message<byte[]>)messsage;
+        Messages<byte[]> messages = consumer.batchReceive();
+        for (Message<byte[]> msg : messages) {
             MessageId msgId = msg.getMessageId();
             String value= new String(msg.getValue());
             // TODO:对消息进行处理

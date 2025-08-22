@@ -13,9 +13,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
+									<source>11</source>
+				<target>11</target>
+</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -46,7 +46,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<pulsar.version>2.7.1</pulsar.version>
+		<pulsar.version>4.0.5</pulsar.version>
 	</properties>
 
 	<dependencies>

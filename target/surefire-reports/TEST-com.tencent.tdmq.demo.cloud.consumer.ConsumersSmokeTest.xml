@@ -59,6 +59,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase name="testBatchConsumerHasMain" classname="com.tencent.tdmq.demo.cloud.consumer.ConsumersSmokeTest" time="0.003"/>
-  <testcase name="testSimpleConsumerHasMain" classname="com.tencent.tdmq.demo.cloud.consumer.ConsumersSmokeTest" time="0"/>
+  <testcase name="testSimpleConsumerHasMain" classname="com.tencent.tdmq.demo.cloud.consumer.ConsumersSmokeTest" time="0.002"/>
+  <testcase name="testBatchConsumerHasMain" classname="com.tencent.tdmq.demo.cloud.consumer.ConsumersSmokeTest" time="0.001"/>
 </testsuite>

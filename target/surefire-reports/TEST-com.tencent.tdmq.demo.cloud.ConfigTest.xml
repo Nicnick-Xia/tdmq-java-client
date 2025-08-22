@@ -59,9 +59,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
+  <testcase name="testSubscriptionNotEmpty" classname="com.tencent.tdmq.demo.cloud.ConfigTest" time="0"/>
   <testcase name="testTokenNotEmpty" classname="com.tencent.tdmq.demo.cloud.ConfigTest" time="0"/>
   <testcase name="testServiceUrlProtocol" classname="com.tencent.tdmq.demo.cloud.ConfigTest" time="0"/>
   <testcase name="testServiceUrlHasHostAndPort" classname="com.tencent.tdmq.demo.cloud.ConfigTest" time="0"/>
   <testcase name="testTopicStartsWithPersistent" classname="com.tencent.tdmq.demo.cloud.ConfigTest" time="0"/>
-  <testcase name="testSubscriptionNotEmpty" classname="com.tencent.tdmq.demo.cloud.ConfigTest" time="0"/>
 </testsuite>

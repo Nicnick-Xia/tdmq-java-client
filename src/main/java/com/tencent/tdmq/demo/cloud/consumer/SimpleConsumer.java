@@ -2,8 +2,11 @@ package com.tencent.tdmq.demo.cloud.consumer;
 
 import com.tencent.tdmq.demo.cloud.Config;
 import org.apache.pulsar.client.api.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SimpleConsumer {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleConsumer.class);
     public static void main(String[] args) throws PulsarClientException {
         invoke();
     }
@@ -13,7 +16,7 @@ public class SimpleConsumer {
                 .serviceUrl(Config.SERVICE_URL)
                 .authentication(AuthenticationFactory.token(Config.TOKEN))
                 .build();
-        System.out.println(">> pulsar client created.");
+        LOGGER.info(">> pulsar client created.");
 
         //创建消费者
         Consumer<byte[]> consumer = client.newConsumer()
@@ -29,7 +32,7 @@ public class SimpleConsumer {
                 //配置从最早开始消费，否则可能会消费不到历史消息
                 .subscriptionInitialPosition(SubscriptionInitialPosition.Earliest)
                 .subscribe();
-        System.out.println(">> pulsar consumer created.");
+        LOGGER.info(">> pulsar consumer created.");
 
         for (int i = 0; i < 10; i++) {
             // 等待接收到下一条消息
@@ -38,7 +41,7 @@ public class SimpleConsumer {
             String value= new String(msg.getValue());
             try {
                 // TODO:对消息进行处理
-                System.out.println("receive msg " + msgId + ",value:" + value);
+                LOGGER.info("receive msg " + msgId + ",value:" + value);
                 // 消费者确认收到消息
                 consumer.acknowledge(msg);
             } catch (Exception e) {

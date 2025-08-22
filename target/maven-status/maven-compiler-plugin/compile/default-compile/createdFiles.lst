@@ -1,0 +1,12 @@
+com/tencent/tdmq/demo/cloud/producer/AsyncMessageProducer.class
+com/tencent/tdmq/demo/cloud/producer/SimpleMessageProducer.class
+com/tencent/tdmq/demo/cloud/producer/ChunkingCompressionDemo.class
+com/tencent/tdmq/demo/cloud/producer/BatchMessageProducer.class
+com/tencent/tdmq/demo/cloud/consumer/SimpleConsumer.class
+com/tencent/tdmq/demo/cloud/consumer/DeadLetterPolicyConsumerDemo.class
+com/tencent/tdmq/demo/cloud/producer/DelayMessageProducer.class
+com/tencent/tdmq/demo/cloud/consumer/KeySharedConsumerDemo.class
+com/tencent/tdmq/demo/cloud/Config.class
+com/tencent/tdmq/demo/cloud/SimpleProducerAndConsumer.class
+com/tencent/tdmq/demo/cloud/producer/DelayedMessageDemo.class
+com/tencent/tdmq/demo/cloud/consumer/BatchConsumer.class

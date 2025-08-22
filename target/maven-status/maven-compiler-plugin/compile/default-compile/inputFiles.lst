@@ -1,0 +1,12 @@
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/Config.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/SimpleProducerAndConsumer.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/consumer/BatchConsumer.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/consumer/DeadLetterPolicyConsumerDemo.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/consumer/KeySharedConsumerDemo.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/consumer/SimpleConsumer.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/producer/AsyncMessageProducer.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/producer/BatchMessageProducer.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/producer/ChunkingCompressionDemo.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/producer/DelayMessageProducer.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/producer/DelayedMessageDemo.java
+/workspace/src/main/java/com/tencent/tdmq/demo/cloud/producer/SimpleMessageProducer.java

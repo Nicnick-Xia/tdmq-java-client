@@ -2,10 +2,13 @@ package com.tencent.tdmq.demo.cloud.consumer;
 
 import com.tencent.tdmq.demo.cloud.Config;
 import org.apache.pulsar.client.api.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
 public class BatchConsumer {
+    private static final Logger logger = LoggerFactory.getLogger(BatchConsumer.class);
     public static void main(String[] args) throws PulsarClientException {
         invoke();
     }
@@ -15,7 +18,7 @@ public class BatchConsumer {
                 .serviceUrl(Config.SERVICE_URL)
                 .authentication(AuthenticationFactory.token(Config.TOKEN))
                 .build();
-        System.out.println(">> pulsar client created.");
+        logger.info("{}", ">> pulsar client created.");
 
         //创建消费者
         Consumer<byte[]> consumer = client.newConsumer()
@@ -37,15 +40,14 @@ public class BatchConsumer {
                         .timeout(200, TimeUnit.MILLISECONDS)
                         .build())
                 .subscribe();
-        System.out.println(">> pulsar consumer created.");
+        logger.info("{}", ">> pulsar consumer created.");
 
-        Messages messages = consumer.batchReceive();
-        for (Object messsage : messages) {
-            Message<byte[]> msg = (Message<byte[]>)messsage;
+        Messages<byte[]> messages = consumer.batchReceive();
+        for (Message<byte[]> msg : messages) {
             MessageId msgId = msg.getMessageId();
             String value= new String(msg.getValue());
             // TODO:对消息进行处理
-            System.out.println("receive msg " + msgId + ",value:" + value);
+            logger.info("receive msg {},value:{}", msgId, value);
         }
         consumer.acknowledge(messages);
 
